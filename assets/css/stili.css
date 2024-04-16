@@ -1,0 +1,690 @@
+﻿@charset "utf-8";
+
+body {
+  /*  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../img/wp4201464-lima-peru-wallpapers.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family : Questrial, "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+#myVideo {
+    position: fixed;
+    z-index: -99;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*body > div#section-header * {
+    padding: 0;
+    margin: 0;
+}*/
+main.content div.sing_cont{
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+div.flex_container{
+    display: flex;
+}
+
+
+div.meteo_sinistra{
+    flex: 1;
+  /*  border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.2);*/
+}
+
+div.meteo_destra{
+    flex: 1;
+}
+div.top{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+div.top p{
+    font-size: 28px;
+    color: #ffffff;
+    margin: 28px 0px 0px 0px;
+}
+
+div p{
+    font-size: 25px;
+    font-weight: 300;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+main.content{
+    max-width: 90%;
+}
+
+#map {
+    height: 250px;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+h2.list_title{
+    text-align: center;
+    font-weight: 100;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+}
+div.elenco{
+    max-width: 550px;
+    margin: 50px auto auto auto;
+    font-weight: 300;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+div.elenco a{
+    text-decoration: none;
+    color: white;
+}
+
+
+div#section-header {
+   /* background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    /*background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid #000000 1px;*/
+    width: 100%;
+}
+
+
+div#section-header > header.hh {
+    width: 380px;
+    margin: 0 auto 0 auto;
+    padding-top: 15px;
+}
+
+div#section-header > header.hh > p{
+    margin-top: 20px;
+    text-align: center;
+}
+div#section-header > nav > ul{
+    text-align: center;
+    margin: 1.2% auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+}
+
+div#section-header > nav ul li {
+    /*display: inline;*/
+    margin: 0px 60px 0px 0px;
+    width: 250px;
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+
+div#section-header > nav ul li a {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 300;
+    text-transform: none;
+    padding: 5px 8px 5px 8px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.09em;
+    display: inline-block;
+    position: relative;
+}
+div#section-header > nav ul li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+div#section-header > nav ul li.home a {
+    background-color: rgba(60,60,60,1);
+    border-radius: 10px;
+}
+
+div#section-header > nav ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+main {
+    margin: auto auto;
+    padding: 15px 10px 5px 10px;
+    overflow: hidden;
+    min-height: calc(165px + 24.95vw);
+}
+main div#frm{
+    max-width: 490px;
+    margin: auto;
+    /*margin-top: calc(60px + 6vw);*/
+}
+
+main div#pren{
+    max-width: 550px;
+    margin: auto;
+    clear: both;
+    /*margin-top: calc(60px + 6vw);*/
+}
+main div#err{
+    max-width: 700px;
+    margin: auto;
+    clear: both;
+    /*margin-top: calc(60px + 6vw);*/
+}
+main div#vis{
+    max-width: 800px;
+    margin: auto;
+    clear: both;
+    /*margin-top: calc(60px + 6vw);*/
+}
+main div#err p{
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+main div#pren p{
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+main div#pren p.pr{
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+hr{
+    clear: both;
+}
+
+main div#vis h2{
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    margin-top: 6%;
+    margin-bottom: calc(20px + 1vw);
+}
+
+
+main div#frm h2{
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    margin-top: 16%;
+    margin-bottom: calc(20px + 2vw);
+}
+main div#pren h2{
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    margin-top: 14%;
+    margin-bottom: calc(20px + 2vw);
+}
+
+main div#err h2{
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    margin-top: 14%;
+    margin-bottom: calc(20px + 2vw);
+}
+
+main div#frm form{
+    font-weight: 100;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+main div#frm form div.btn{
+    text-align: center;
+}
+
+.inp{
+    float: right;
+    clear: right;
+    padding-right: 30px;
+}
+.le {
+    float: left;
+    clear: left;
+    padding-left: 30px;
+}
+
+input[type="text"], textarea {
+    background-color : rgba(98, 98, 98, 0.5);
+    border-radius: 5px;
+    width: 65%;
+    height: 23px;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: none;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    padding: 1px 5px 1px 5px;
+}
+input[type="date"]{
+    background-color : rgba(98, 98, 98, 0.5);
+    border-radius: 5px;
+    width: 40%;
+    height: 23px;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: none;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    padding: 1px 1px 1px 8px;
+}
+
+form.form_coord{
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="submit"]{
+    background-color : rgba(98, 98, 98, 0.7);
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.5);
+    width: 45%;
+    height: 40px;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: none;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+}
+
+input[type="submit"].btn_elenco{
+    margin-top: 20px;
+    width: 100% ;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+
+input[type="submit"]:hover{
+    background-color: rgba(255,255,255,0.8);
+    /*  box-shadow: inset 0px 0px 2px #FFFFFF;*/
+    color: #000000;
+    cursor: pointer;
+}
+
+
+input[type="number"]{
+    background-color : rgba(98, 98, 98, 0.5);
+    border-radius: 5px;
+    width: 50%;
+    height: 23px;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: none;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 800px;
+    overflow: auto;
+}
+table, th, td {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    font-size: 23px;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(0,0,0,0.2);
+}
+div#table{
+    overflow: auto;
+    max-height: 450px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.ar{
+    margin-left: 70px;
+}
+
+div#bottoni{
+    margin-top: calc(13px + 5vw);
+    text-align: center;
+}
+
+
+div#bottoni > ul{
+    text-align: center;
+    margin-top: 1.5%;
+
+}
+
+
+div#bottoni ul li {
+    display: inline;
+    margin: 0px 70px 0px 0px;
+
+}
+div#bottoni ul li.aa {
+    display: inline;
+    margin: 0px 40px 0px 0px;
+
+}
+
+div#bottoni ul li.sing {
+    display: inline;
+    margin: 0px 32px 0px 0px;
+}
+
+@media screen and (max-width: 1000px){
+    div#bottoni ul li {
+        display: block;
+        margin: 0px 8% 0px 0px;
+
+    }
+    div#bottoni ul li.b_right {
+        display: block;
+        margin: 70px 8% 0px 0px;
+    }
+
+    div#section-header {
+        min-height: unset;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+     div#h_title h1 {
+        margin: 0 0 0 0;
+    }
+
+}
+
+div#bottoni ul li a {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: none;
+    padding: 25px 15px 25px 15px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(124, 123, 123, 0.5);
+    border-radius: 2px;
+}
+
+
+ div#bottoni ul li a:hover {
+   /* text-shadow: 1px 1px 1px #ffffff;*/
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 2px;
+  /*  box-shadow: inset 0px 0px 2px #FFFFFF;*/
+    color: #000000;
+}
+ div#my_city_title h1{
+     font-weight: 700;
+     font-style: normal;
+     font-family: 'Raleway', sans-serif;
+     color: #ffffff;
+     font-size:calc(20px + 4.8vw);
+     line-height: 1.2;
+     letter-spacing: 14px;
+     text-align: center;
+     padding: 0;
+     margin: 0 0 0 0px;
+ }
+
+
+ div#h_title h1 {
+   /* font-family: 'Squada One', cursive;
+    font-weight: 700;
+    font-size: 200px;
+    text-align: center;
+    color: white;
+    margin-bottom:0px;*/
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size:calc(60px + 6.8vw);
+    line-height: 1.2;
+    letter-spacing: 16px;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 0 0px;
+}
+main h1.info{
+	 text-align: center;
+}
+
+div#h_title{
+    max-width: 100%;
+    margin: 4% auto auto auto;
+}
+
+ div#h_title p.title{
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    margin: 4% 0 0 0;
+}
+
+p.subtitle{
+    font-weight: 100;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1600px) {
+    /*div#section-header h1 {
+        font-weight: 800;
+        font-style: normal;
+        font-family: 'Raleway', sans-serif;
+        color: #ffffff;
+        line-height: 1.2;
+        letter-spacing: 20px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 3%;
+    }*/
+    div#h_title{
+        max-width: 80%;
+        margin: 11% auto auto auto;
+    }
+
+}
+
+
+main h2.in{
+	 font-family: Marmelad, sans-serif;
+    font-weight: normal;
+    color: black;
+    font-size: 30px;
+    border-bottom: solid #000000 1px;
+    text-align: center;
+}
+
+main h3 {
+    font-family: Marmelad, sans-serif;
+    font-weight: normal;
+    font-size: 23px;
+    color: #000000;
+    text-align: center;
+}
+
+
+form p{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.secondary_page{
+    min-height: 68%;
+}
+.secondary_page h3{
+    margin-top: 40px;
+}
+
+main > form > img{
+    float: left;
+    margin-left: 4%;
+
+}
+.col{
+    margin-top: 7%;
+}
+.colore{
+    margin-top: 2%;
+}
+.tag{
+    margin-top: 3%;
+}
+
+figure img{
+	width: 290px;
+	height: 250px;
+}
+
+figure {
+    float: none;
+    margin: 25px 0 25px 20px;
+    border: solid #AAAAAA 1px;
+    display: inline-block;
+
+}
+
+figure.ff{
+	text-align: center;
+	float: none;
+	padding: 0;
+    margin: 0;
+    border: solid #AAAAAA 0px;
+    margin-bottom: 50px;
+    display: block;
+	}
+
+figure.ff > a >img{
+	height: 100px;
+	width: 100px;
+}
+
+figure.ff > figcaption{
+	text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.0);
+}
+
+figcaption {
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    background-color: #FFFFFF;
+}
+
+footer {
+    clear: both;
+    display:block;
+    margin: 30px 15px 30px 15px;
+    border-top: solid rgba(255,255,255, 0.4) 1px;
+    padding-top: 0px;
+    overflow: auto;
+
+}
+
+@media screen and (max-width: 2160px) {
+    footer {
+        margin: 80px 15px 30px 15px;
+    }
+}
+
+
+footer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+}
+

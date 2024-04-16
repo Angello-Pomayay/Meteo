@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Meteo</title>
+    <link rel="icon" href="img/sole.png">
+    <link href="css/stili.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="section-header">
+    <header class="hh">
+        <p style="text-align: center">
+            <a href="index"><img src="img/meteo_logo.png" style="max-width: 300px;" alt=""></a>
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index">HOME</a></li>
+            <li><a id="my_city_request">LA MIA CITTÁ</a></li>
+            <li><a href="elenco" >ELENCO CITTÁ</a></li>
+        </ul>
+    </nav>
+</div>
+<main class="content">
+    <form id="form" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+    </form>
+    <% if(weather !==null){%>
+    <div id="my_city_title">
+        <h1><%= place %></h1>
+        <p class="subtitle"><%= coordinates %></p>
+        <p class="subtitle">Meteo di oggi, e dei prossimi 7 giorni</p>
+    </div>
+
+        <% for(var i=0; i<weatherDays.length; i++) {%>
+    <!-- per ogni gionro verrà stampato -->
+    <div class="sing_cont">
+        <div class="top">
+            <p> <%= weatherDays[i].time %></p>
+        </div>
+
+        <div class="flex_container">
+            <!-- foto e data  -->
+            <div class= "meteo_sinistra">
+                <img src="<%= weatherDays[i].icon %>" height="250px" width="250px">
+            </div>
+
+            <!-- informazioni -->
+            <div class = "meteo_destra">
+                <p>Temperatura media: <%= weatherDays[i].temp %>°C</p>
+                <p>Min: <%= weatherDays[i].temp_min %>°C</p>
+                <p>Max: <%= weatherDays[i].temp_max  %>°C</p>
+                <p>Tempo: <%= weatherDays[i].description %></p>
+            </div>
+        </div>
+    </div>
+            <% } %>
+
+        <% } %>
+        <% if(error !=null){ %>
+            <p>
+                <%= error %>
+            </p>
+        <% } %>
+
+</main>
+
+<footer>
+    <p>Sito web per la visualizzazione del meteo tramite API <a style="color:  rgba(255, 255, 255, 0.7)" href="https://openweathermap.org/">https://openweathermap.org/</a><br>
+        Realizzato a scopo didattico da Angello Pomayay studente UNIMI - SSRI</p>
+</footer>
+
+<div id="sfondo">
+    <video autoplay muted loop id="myVideo">
+        <source src="img/video_darker.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+    document.getElementById("my_city_request").addEventListener("click", sendRequestMyCity);
+
+    // send request for API
+
+    async function sendRequestMyCity(event) {
+
+        event.preventDefault();
+
+        document.getElementById("form").setAttribute("action", "/city");
+
+        navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords;
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+            document.getElementById("form").submit();
+        });
+
+        return false;
+    }
+</script>
+</body>
+</html>

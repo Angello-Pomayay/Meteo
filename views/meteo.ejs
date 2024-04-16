@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Meteo</title>
+    <link rel="icon" href="img/sole.png">
+    <link href="css/stili.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="section-header">
+    <header class="hh">
+        <p style="text-align: center">
+            <a href="index"><img src="img/meteo_logo.png" style="max-width: 300px;" alt=""></a>
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index">HOME</a></li>
+            <li><a id="my_city_request">LA MIA CITTÁ</a></li>
+            <li><a href="elenco">ELENCO CITTÁ</a></li>
+        </ul>
+    </nav>
+</div>
+<main>
+    <!-- form per l'invio di dati quando viene fatta una richiesta-->
+    <form id="form" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+    </form>
+    <div id="h_title">
+        <p class="title">- MAI PIÙ SENZA OMBRELLO -</p>
+        <h1>METEO</h1>
+        <p class="subtitle">Guarda subito il meteo della tua città oppure scegli una città nel nostro database</p>
+    </div>
+    <div id="bottoni">
+        <ul>
+            <li class="b_left"><a id="my_city_request2">METEO DELLA MIA CITTÀ</a></li>
+            <li class="b_right"><a href="elenco">ELENCO DELLE CITTÀ</a></li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <p>Sito web per la visualizzazione del meteo tramite API <a style="color: rgba(255, 255, 255, 0.7)" href="https://openweathermap.org/">https://openweathermap.org/</a><br>
+        Realizzato a scopo didattico da Angello Pomayay studente UNIMI - SSRI</p>
+</footer>
+
+<div id="sfondo">
+    <video autoplay muted loop id="myVideo">
+        <source src="img/video_darker.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+    document.getElementById("my_city_request").addEventListener("click", sendRequestMyCity);
+    document.getElementById("my_city_request2").addEventListener("click", sendRequestMyCity);
+
+    // send request for API
+
+    async function sendRequestMyCity(event) {
+
+        event.preventDefault();
+
+        document.getElementById("form").setAttribute("action", "/city");
+
+        navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords;
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+            document.getElementById("form").submit();
+        });
+
+        return false;
+    }
+</script>
+
+</body>
+</html>
