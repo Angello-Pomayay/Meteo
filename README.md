@@ -6,7 +6,7 @@ I created this project as a part of my university exam for the Web and Mobile Pr
 application of various technologies and concepts learned throughout the course. The project is built using JavaScript, 
 and it uses MongoDB as DBMS to contain all the coordinates of all places inserted by users.
 
-![ezgif com-video-to-gif-converter (1)](https://github.com/Angello-Pomayay/Meteo/assets/159076658/30fb2af3-c280-46df-9ee2-6058b0e30da7)
+![gif1](https://github.com/Angello-Pomayay/Meteo/assets/159076658/30fb2af3-c280-46df-9ee2-6058b0e30da7)
 
 ### MongoDB
 
@@ -36,4 +36,11 @@ usage, to create a functional weather information application.
 ## Future Improvements
 
 I've chosen to use coordinates to identify cities in this project just to make it different, but I will add a search bar
-as well, so users can search for cities by name.
+as well, so users can search for cities by name. The initial idea was to put a predefined list of cities in the database
+and if the user didn't find the city he was looking for, he could add it to the database by inserting the coordinates, A
+sort of community-driven database.
+
+## Screenshots
+
+<img src="screenshots/1.png" width="32%">  <img src="screenshots/2.png" width="32%">  <img src="screenshots/3.png" width="32%">
+
