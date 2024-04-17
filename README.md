@@ -8,8 +8,8 @@ and it uses MongoDB as DBMS to contain all the coordinates of all places inserte
 
 ### MongoDB
 
-MongoDB, a NoSQL database, is used for data storage in this project. It stores city coordinates and related
-weather data. The project includes scripts for creating the database and collections (`create_db.js` and
+MongoDB, a NoSQL database, is used for data storage in this project. Stores coordinates and city names.
+The project includes scripts for creating the database and collections (`create_db.js` and
 `cities_coordinates_db.js`), as well as functions for updating and retrieving data from the database (`server.js`).
 
 ## Project Structure
