@@ -6,6 +6,8 @@ I created this project as a part of my university exam for the Web and Mobile Pr
 application of various technologies and concepts learned throughout the course. The project is built using JavaScript, 
 and it uses MongoDB as DBMS to contain all the coordinates of all places inserted by users.
 
+![ezgif com-video-to-gif-converter (1)](https://github.com/Angello-Pomayay/Meteo/assets/159076658/30fb2af3-c280-46df-9ee2-6058b0e30da7)
+
 ### MongoDB
 
 MongoDB, a NoSQL database, is used for data storage in this project. Stores coordinates and city names.
